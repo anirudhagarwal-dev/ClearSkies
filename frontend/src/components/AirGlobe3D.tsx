@@ -234,7 +234,7 @@ export const AirGlobe3D: React.FC<AirGlobe3DProps> = ({
 
   return (
     <div 
-      className="relative w-full h-[320px] rounded-2xl overflow-hidden glass-panel border border-white/10 p-4 flex flex-col justify-between transition-all duration-500 hover:border-cyan-500/40 group"
+      className="relative w-full h-full min-h-[340px] rounded-2xl overflow-hidden glass-panel border border-white/10 p-4 flex flex-col justify-between transition-all duration-500 hover:border-cyan-500/40 group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{

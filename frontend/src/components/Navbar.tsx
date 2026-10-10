@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           DEMO MODE ACTIVE: Displaying calibrated ground-truth simulation for Delhi-NCR stations. All responses tagged dataKind=SAMPLE.
         </div>
       )}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab("dashboard")}>
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/25">

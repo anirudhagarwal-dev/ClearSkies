@@ -189,7 +189,7 @@ export function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+      <main className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
         {/* Search & Location Bar */}
         <section className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 glass-panel p-4 border border-white/10">
           <form onSubmit={handleSearch} className="flex-1 flex items-center relative">
@@ -212,7 +212,7 @@ export function App() {
           {/* Quick Location Pills */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 text-xs font-medium">
             <span className="text-slate-500 text-[11px] shrink-0 font-semibold uppercase tracking-wider">Quick:</span>
-            {locations.slice(0, 4).map((loc) => (
+            {locations.slice(0, 5).map((loc) => (
               <button
                 key={loc.id}
                 onClick={() => setSelectedLocation(loc)}
@@ -232,8 +232,8 @@ export function App() {
         {activeTab === "dashboard" && (
           <div className="space-y-6">
             {/* Hero Grid: Main Verdict & 3D Interactive Model */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+              <div className="lg:col-span-2 flex flex-col">
                 {verdictData ? (
                   <VerdictCard
                     data={verdictData}
@@ -247,7 +247,7 @@ export function App() {
               </div>
 
               {/* 3D Atmospheric Particles Globe Model */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-1 flex flex-col">
                 {verdictData ? (
                   <AirGlobe3D
                     aqiValue={verdictData.aqiValue}
@@ -256,7 +256,7 @@ export function App() {
                     dominantPollutant={verdictData.dominantPollutant}
                   />
                 ) : (
-                  <div className="glass-panel h-[320px] p-6 text-center text-slate-400 flex items-center justify-center">
+                  <div className="glass-panel h-[340px] p-6 text-center text-slate-400 flex items-center justify-center">
                     Initializing 3D globe...
                   </div>
                 )}
@@ -339,7 +339,7 @@ export function App() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-slate-950 py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-[1600px] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p>
             AirTrack • Built for Bharat Builds Tour Environmental Hacks (WeMakeDevs x AWS) • Official CPCB NAQI Standards
           </p>
